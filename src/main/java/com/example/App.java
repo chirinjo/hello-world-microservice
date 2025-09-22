@@ -2,10 +2,17 @@ package com.example;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        while (true) {
+            System.out.println("Hello, CI/CD Pipeline! (Running...)");
+            try {
+                Thread.sleep(5000); // Print every 5 seconds
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public String getGreeting() {
-        return "Hello, World!";
+        return "Hello, CI/CD Pipeline! (Running...)";
     }
 }
